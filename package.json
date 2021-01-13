@@ -9,6 +9,10 @@
   },
   "author": "Joseph Hayes <joephayes@gmail.com> (http://github.com/joephayes)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-norman-sicily-project/media-viewer.git"
+  },
   "dependencies": {
     "mirador": "^3.0.0",
     "mirador-image-tools": "^0.10.0",
