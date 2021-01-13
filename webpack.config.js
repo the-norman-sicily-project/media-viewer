@@ -19,9 +19,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Media Viewer',
+      title: 'Norman Sicily Project Media Viewer',
       template: './public/index.html',
-      inject: 'body'
-    })
+      inject: 'body',
+      favicon: './assets/favicon.png'
+    }),
   ]
 };
