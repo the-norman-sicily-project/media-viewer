@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    catalog: './data/catalog.js'
+    index: './src/index.js'
+    
   },
   output: {
     filename: '[name].bundle.js',
@@ -23,6 +24,11 @@ module.exports = {
       template: './public/index.html',
       inject: 'body',
       favicon: './assets/favicon.png'
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "data", to: "data" }
+      ],
     }),
   ]
 };
